@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultMap>
+    <entry>
+        <key>user_fetch_interval</key>
+        <value>21600</value>
+    </entry>
+    <entry>
+        <key>admin_custom_notification_screen</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>user_custom_admin_info_screen</key>
+        <value></value>
+    </entry>
+</defaultMap>

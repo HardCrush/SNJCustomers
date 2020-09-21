@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ExtraActivity"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:onClick="rateOnClick"
+
+                android:paddingStart="@dimen/home_page_mode_item_padding_horizontal"
+                android:paddingEnd="@dimen/home_page_mode_item_padding_horizontal"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/rate_the_app"
+                    android:textColor="@color/object_confirmed_bg_gradient_end"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:text="Loading ratings"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/object_detected_bg_gradient_end"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#43141414"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/home_page_mode_item_padding_horizontal"
+                android:paddingEnd="@dimen/home_page_mode_item_padding_horizontal"
+                android:onClick="chatOnClick"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="8dp"
+                    android:text="Feedback"
+                    android:textColor="@color/object_confirmed_bg_gradient_end"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Give us your feedback"
+                    android:textColor="@color/object_detected_bg_gradient_end"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#43141414"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:onClick="checkUpdateOnClick"
+                android:paddingStart="@dimen/home_page_mode_item_padding_horizontal"
+                android:paddingEnd="@dimen/home_page_mode_item_padding_horizontal"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="8dp"
+                    android:text="Check new update"
+                    android:textColor="@color/object_confirmed_bg_gradient_end"
+                    android:textSize="16sp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:id="@+id/progress"
+                        android:visibility="gone"
+                        android:layout_height="23dp"/>
+                    <TextView
+                        android:id="@+id/update"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        android:text="@string/check_whether_a_new_update_is_available_to_download"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/object_detected_bg_gradient_end"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#43141414"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+</RelativeLayout>

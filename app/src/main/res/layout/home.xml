@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E9EF"
+    tools:context=".HomeUser"
+    >
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+        <!--android:weightSum="8"-->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:background="@drawable/bg2"
+            android:layout_height="400dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Home"
+            android:textSize="23sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/logo"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:id="@+id/logo"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="showAppInfo"
+            android:src="@drawable/ic_logofinal"
+            android:layout_height="60dp"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="15dp"
+            android:id="@+id/nameLayout"
+            app:cardCornerRadius="20dp"
+            android:layout_height="40dp">
+      <ImageView
+          android:layout_width="40dp"
+          android:background="@drawable/username_shape"
+          android:id="@+id/userimage"
+          android:layout_height="40dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/username"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"/>
+        </com.google.android.material.card.MaterialCardView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/nameLayout"
+            android:background="@drawable/search_bar"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/search_icon_home"
+            android:drawablePadding="10dp"
+            android:background="?selectableItemBackground"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:hint="@string/search"
+            android:onClick="searchOnClick"
+            android:paddingStart="10dp"
+            android:layout_margin="1dp"
+            android:paddingEnd="10dp"
+            android:textColorHint="#546F6A" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/textGrid"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="130dp"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="@string/shree_nath_ji_chilled_waters"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="34sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:id="@+id/l1"
+            android:layout_below="@id/textGrid"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="230dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="1dp"
+                app:cardElevation="8dp"
+                android:onClick="transactionOnClick"
+                app:cardCornerRadius="8dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        app:cardBackgroundColor="#F2BF63"
+                        app:cardCornerRadius="32dp"
+
+                        app:cardElevation="10dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="10dp"
+                            android:src="@drawable/currency"
+                            android:scaleType="fitCenter"
+
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Transactions"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/lightgray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="See all your transactions and the QR Codes"
+                        android:textColor="@android:color/darker_gray" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="230dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="1dp"
+                android:layout_marginStart="1dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:onClick="orderOnClick"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        app:cardBackgroundColor="#0aca0a"
+                        app:cardCornerRadius="32dp"
+                        app:cardElevation="10dp">
+
+                        <ImageView
+                            android:layout_width="54dp"
+                            android:layout_height="54dp"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerInside"
+                            android:tint="#fff"
+                            android:layout_marginEnd="3dp"
+                            app:srcCompat="@drawable/neworder" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Orders"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/lightgray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="All your bottle purchases and the QR Codes "
+                        android:textColor="@android:color/darker_gray" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:id="@+id/l2"
+            android:layout_below="@id/l1"
+            android:paddingBottom="20dp"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="230dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="1dp"
+                app:cardElevation="8dp"
+                android:onClick="BottleOnClick"
+                app:cardCornerRadius="8dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        app:cardCornerRadius="32dp"
+                        app:cardBackgroundColor="#E1E1DF"
+
+                        app:cardElevation="10dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="10dp"
+
+                            android:src="@drawable/water_bottle"
+                            android:scaleType="fitCenter"
+
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bottles"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/lightgray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="See total bottles taken and received"
+                        android:textColor="@android:color/darker_gray" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="230dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="1dp"
+                android:layout_marginStart="1dp"
+                app:cardElevation="8dp"
+                android:onClick="settingsOnClick"
+                app:cardCornerRadius="8dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        app:cardBackgroundColor="#fe104d"
+                        app:cardCornerRadius="32dp"
+                        app:cardElevation="10dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="10dp"
+                            android:tint="#fff"
+                            android:src="@drawable/ic_settings_black_24dp"
+                            android:scaleType="fitCenter"
+
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Settings"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/lightgray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="See the information of the admin and the app"
+                        android:textColor="@android:color/darker_gray" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginStart="18dp"-->
+<!--            android:layout_marginEnd="18dp"-->
+<!--            android:padding="5dp"-->
+<!--            android:visibility="gone"-->
+<!--            android:id="@+id/temp_info_card"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:layout_below="@id/l2"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <ImageView-->
+<!--                    android:layout_width="30dp"-->
+<!--                    android:id="@+id/cancel_temp"-->
+<!--                    android:layout_marginEnd="5dp"-->
+<!--                    android:background="@drawable/seekbar_shape"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:src="@drawable/cancel"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    android:layout_height="30dp"/>-->
+<!--                <ImageView-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:id="@+id/icon_temp"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:src="@drawable/bottle_drawable"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    android:layout_height="60dp"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:maxLines="2"-->
+<!--                    android:id="@+id/title_temp"-->
+<!--                    android:layout_toStartOf="@id/cancel_temp"-->
+<!--                    android:fontFamily="sans-serif-thin"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:layout_marginStart="6dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:layout_toEndOf="@id/icon_temp"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:id="@+id/desc_temp"-->
+<!--                    android:layout_toEndOf="@id/icon_temp"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:layout_marginStart="6dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_below="@id/title_temp"-->
+<!--                    android:textColor="@color/info_box_desc"-->
+<!--                    android:paddingBottom="10dp"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--            </RelativeLayout>-->
+<!--        </com.google.android.material.card.MaterialCardView>-->
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:id="@+id/frame"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"/>
+    <include layout="@layout/bottom_notification_card"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:id="@+id/info_box"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content" />
+</RelativeLayout>
+
+
+
+
+
+
+
+

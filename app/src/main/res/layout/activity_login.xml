@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#fff">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_logofinal" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/relativeLayout"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/waves" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="30dp"
+        android:text="@string/enter_phone_number"
+        android:layout_marginStart="15dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/black" />
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:text="@string/_91"
+            android:inputType="none"
+            android:focusable="false"
+            android:background="#fff"
+            android:paddingStart="10dp"
+            android:paddingEnd="1dp"
+            android:layout_alignBaseline="@id/editTextPhone"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:inputType="number"
+            android:paddingStart="50dp"
+            android:imeOptions="actionNext"
+            android:paddingEnd="10dp"
+            android:hint="@string/enter_your_number"
+            android:maxLength="10"
+            />
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="-26dp"
+            android:layout_marginTop="-4dp"
+            android:layout_marginEnd="40dp"
+            android:visibility="gone"
+            android:layout_toEndOf="@+id/editTextPhone" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonContinue"
+        android:layout_width="150dp"
+        app:cornerRadius="5dp"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="#ffffff" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:id="@+id/snackbar_view"
+        android:elevation="6dp"
+        android:layout_below="@id/linearLayout"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

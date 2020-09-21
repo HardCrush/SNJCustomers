@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">#6200EE</color>-->
+<!--    <color name="colorPrimaryDark">#3700B3</color>-->
+<!--    <color name="colorAccent">#03DAC5</color>-->
+    <color name="colorPrimary">#FFC107</color>
+    <color name="colorPrimaryDark">#FFA000</color>
+    <color name="lightgray">#ededed</color>
+    <color name="blue">#00bfa5</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="red">#D50000</color>
+    <color name="green">#0aca0a</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="object_detected_bg_gradient_end">#66000000</color>
+    <color name="object_confirmed_bg_gradient_start">#40000000</color>
+    <color name="object_confirmed_bg_gradient_end">#A0000000</color>
+    <color name="disable_color">#717070</color>
+    <color name="info_box_desc">#AB000000</color>
+</resources>

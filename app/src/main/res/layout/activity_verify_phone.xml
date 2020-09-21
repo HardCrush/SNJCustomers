@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerifyPhoneActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#fff">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_logofinal" />
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/relativeLayout"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/waves" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_below="@id/imageView"
+        android:paddingStart="@dimen/home_page_mode_item_padding_horizontal"
+        android:paddingEnd="@dimen/home_page_mode_item_padding_horizontal"
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/nameLayout"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="32dp"
+            android:paddingBottom="8dp"
+            android:text="@string/username_shop_name"
+            android:textColor="@color/object_confirmed_bg_gradient_end"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:hint="Name"
+            android:imeOptions="actionGo"
+            android:inputType="textPersonName|textCapWords"
+            android:fontFamily="sans-serif"
+            android:textColor="#000"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Sign In"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            app:cornerRadius="5dp"
+            android:minWidth="170dp"
+            android:id="@+id/nameAction"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:onClick="signinWithNameClicked"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/imageView"
+        android:id="@+id/codeLayout"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="OTP Verification"
+            android:textStyle="bold"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:text="@string/verify_code_subtitle"
+            android:textAlignment="center"
+            />
+
+        <EditText
+            android:id="@+id/editTextCode"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView1"
+            android:layout_centerHorizontal="true"
+            android:digits="0123456789"
+            android:gravity="center"
+            android:inputType="number"
+            android:imeOptions="actionGo"
+            android:hint="@string/enter_code"
+            android:maxLength="6"
+            android:importantForAutofill="no" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView1"
+
+            android:layout_marginStart="-26dp"
+            android:layout_marginTop="-4dp"
+            android:layout_marginEnd="40dp"
+            android:layout_toEndOf="@+id/editTextCode" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/editTextCode"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:id="@+id/button_view"
+            android:gravity="center|center_vertical"
+            android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSignIn"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:text="Sending Code"
+                android:textSize="16sp"
+                android:padding="10dp"
+                app:cornerRadius="5dp"
+                android:textAllCaps="false"
+                android:enabled="false"
+                android:textColor="@color/disable_color"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/resendSignIn"
+                android:textColor="@color/disable_color"
+                android:layout_width="170dp"
+                android:visibility="gone"
+                android:padding="10dp"
+                app:cornerRadius="5dp"
+                android:textSize="17sp"
+                android:enabled="false"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:textAllCaps="false"
+                android:onClick="resendOnClick"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:id="@+id/snackbar_view"
+        android:layout_marginTop="-12dp"
+        android:layout_below="@id/codeLayout"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
