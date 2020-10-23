@@ -3,7 +3,7 @@
     <string name="search">Search...</string>
     <string name="no_results_found">No Result Found</string>
     <string name="recent">Recents</string>
-    <string name="_91">+91</string>
+    <string name="mobile_prefix">+44</string>
     <string name="mobile_number">Mobile Number</string>
     <string name="username_shop_name">User Name / Shop Name</string>
     <string name="email_address">Email Address</string>

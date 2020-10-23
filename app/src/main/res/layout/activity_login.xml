@@ -51,7 +51,7 @@
 
         <EditText
             android:layout_width="wrap_content"
-            android:text="@string/_91"
+            android:text="@string/mobile_prefix"
             android:inputType="none"
             android:focusable="false"
             android:background="#fff"
